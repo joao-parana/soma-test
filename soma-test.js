@@ -20,7 +20,6 @@ class SomaTest extends PolymerElement {
       <h3>Testando WebSocket em echo.websocket.org</h3>
       <button on-click="send">Send Message Demo</button>
       <soma-request-websocket id="websocket" path="echo.websocket.org"></soma-request-websocket> 
-      <!--  pathname="" location="url"  -->  
     `;
   }
   static get properties() {
@@ -34,19 +33,22 @@ class SomaTest extends PolymerElement {
 
   ready() {
     super.ready();
-    console.log('I will wait 4 seconds to call the second soma-request-websocket');
+    console.log('I will wait 10 seconds to call the second soma-request-websocket');
     setTimeout(() => {
-        this.$.websocket.request();
-    }, 4000);
+        console.log('calling the second soma-request-websocket');
+        // TODO: corrigir isso -> this.$.websocket.request();
+    }, 10000);
   }
 
   send() {
     console.log('sending message');
-    this.shadowRoot.querySelector('soma-request-websocket').sendMessage({
+    console.log(this.$.websocket);
+    console.log('---------------');
+    this.$.websocket.sendMessage({
         type: "TRACK",
         id: 5203,
         dsName: "U10_ST_WI_PW003"
-    })
+    });
   }
 }
 

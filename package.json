@@ -3,7 +3,9 @@
   "main": "soma-test.js",
   "dependencies": {
     "@polymer/polymer": "^3.0.0",
-    "@soma/soma-request-websocket": "git+ssh://git@bitbucket.org:somaelements/soma-request-websocket.git#semver:^3.0.0"
+    "@soma/soma-request-websocket": "git+ssh://git@bitbucket.org:somaelements/soma-request-websocket.git#semver:^3.0.3",
+    "@soma/soma-icon-button": "git+ssh://git@bitbucket.org:somaelements/soma-icon-button.git#semver:^3.0.0",
+    "@soma/soma-styles": "git+ssh://git@bitbucket.org:somaelements/soma-styles.git#semver:^3.0.0"
   },
   "devDependencies": {
     "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
